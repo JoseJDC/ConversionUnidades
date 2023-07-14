@@ -70,18 +70,27 @@ public class Main {
 	}
 
 	private static int calcularBilletes$1(double cantidad) {
-		// TODO Auto-generated method stub
-		return 0;
+		int $1 = (int) ((cantidadActual) / 1.0);
+		double restante = cantidadActual % 1.0;
+		cantidadActual = restante;
+		
+		return $1;
 	}
 
 	private static int calcularBilletes$5(double cantidad) {
-		// TODO Auto-generated method stub
-		return 0;
+		int $5 = (int) ((cantidadActual) / 5.0);
+		double restante = cantidadActual % 5.0;
+		cantidadActual = restante;
+		
+		return $5;
 	}
 
 	private static int calcularBilletes$10(double cantidad) {
-		// TODO Auto-generated method stub
-		return 0;
+		int $10 = (int) ((cantidadActual) / 10.0);
+		double restante = cantidadActual % 10.0;
+		cantidadActual = restante;
+		
+		return $10;
 	}
 
 	static int calcularBilletes$20() {
