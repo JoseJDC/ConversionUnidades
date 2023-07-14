@@ -36,9 +36,10 @@ public class Main {
 			
 			System.out.println("Introduce la cantidad:");
 			cantidad = sc.nextDouble();
+			cantidadActual = cantidad;
 			
 			$100 = calcularBilletes$100();
-			$20 = calcularBilletes$20(cantidad);
+			$20 = calcularBilletes$20();
 			$10 = calcularBilletes$10(cantidad);
 			$5 = calcularBilletes$5(cantidad);
 			$1 = calcularBilletes$1(cantidad);
@@ -83,15 +84,19 @@ public class Main {
 		return 0;
 	}
 
-	static int calcularBilletes$20(double cantidad) {
-		// TODO Auto-generated method stub
-		return 0;
+	static int calcularBilletes$20() {
+		int $20 = (int) ((cantidadActual) / 20.0);
+		double restante = cantidadActual % 20.0;
+		cantidadActual = restante;
+		
+		return $20;
 	}
 
 	static int calcularBilletes$100() {
-		double restante = cantidad % 100.0;
-		cantidadActual = cantidad - restante;
 		int $100 = (int) ((cantidadActual) / 100.0);
+		double restante = cantidadActual % 100.0;
+		cantidadActual = restante;
+		
 		return $100;
 	}
 }
