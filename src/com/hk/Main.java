@@ -4,11 +4,14 @@ import java.util.Scanner;
 
 public class Main {
 
+	static double cantidad;
+	static double cantidadActual;
+	
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		double cantidad;
+		
 		int $100 = 0;
 		int $20 = 0;
 		int $10 = 0;
@@ -34,7 +37,7 @@ public class Main {
 			System.out.println("Introduce la cantidad:");
 			cantidad = sc.nextDouble();
 			
-			$100 = calcularBilletes$100(cantidad);
+			$100 = calcularBilletes$100();
 			$20 = calcularBilletes$20(cantidad);
 			$10 = calcularBilletes$10(cantidad);
 			$5 = calcularBilletes$5(cantidad);
@@ -85,10 +88,10 @@ public class Main {
 		return 0;
 	}
 
-	static int calcularBilletes$100(double cantidad) {
+	static int calcularBilletes$100() {
 		double restante = cantidad % 100.0;
-		int $100 = (int) ((cantidad - restante) / 100.0);
+		cantidadActual = cantidad - restante;
+		int $100 = (int) ((cantidadActual) / 100.0);
 		return $100;
 	}
-
 }
